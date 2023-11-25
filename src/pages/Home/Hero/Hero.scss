@@ -1,0 +1,110 @@
+@import '../../../App.scss';
+@import '../../../mixins.scss';
+
+.hero-wrapper {
+  background-image: url('../../../assets/banner/banner_bg01.jpg');
+  padding: 295px 0 273px;
+  background-position: center;
+  background-size: cover;
+
+  @include xl {
+    padding: 260px 0 200px;
+    background-position: right center;
+  }
+
+  @include md {
+    padding: 220px 0 160px;
+    background-position: center center;
+  }
+
+  @include sm {
+    padding: 185px 0 140px;
+  }
+
+  .hero-container {
+    .hero-left {
+      width: 66.7%;
+
+      .sub-title {
+        color: #e4d804;
+        font-size: 26px;
+        margin-bottom: 10px;
+
+        @include lg {
+          font-size: 24px;
+        }
+      }
+
+      .title {
+        color: #fff;
+        font-size: 60px;
+        line-height: 1.2;
+        margin-bottom: 29px;
+
+        span {
+          color: #e4d804;
+        }
+      }
+
+      .hero-meta {
+        margin-bottom: 36px;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            margin-right: 20px;
+
+            &.quality {
+              span {
+                font-size: 11px;
+                text-transform: uppercase;
+                color: #21232b;
+                background: #fff;
+                font-weight: 700;
+                padding: 7px 11px;
+                line-height: 1;
+
+                &:last-child {
+                  background: transparent;
+                  color: #fff;
+                  margin-left: 9px;
+                  border: 2px solid #fff;
+                  padding: 5px 10px;
+                }
+              }
+            }
+
+            &.category {
+              a {
+                font-size: 14px;
+                font-weight: 500;
+                color: #e3dfdf;
+
+                & + a {
+                  margin-left: 5px;
+                }
+              }
+            }
+
+            &.release-time {
+              span {
+                font-size: 14px;
+                font-weight: 500;
+                color: #e3dfdf;
+
+                & + span {
+                  margin-left: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

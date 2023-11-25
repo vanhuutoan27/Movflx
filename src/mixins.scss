@@ -1,37 +1,43 @@
+@mixin xs {
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin sm {
-  @media only screen and (min-width: 640px) {
+  @media (max-width: 767.98px) {
     @content;
   }
 }
 
 @mixin md {
-  @media only screen and (min-width: 768px) {
+  @media (max-width: 991.98px) {
     @content;
   }
 }
 
 @mixin lg {
-  @media only screen and (min-width: 1024px) {
+  @media (max-width: 1199.98px) {
     @content;
   }
 }
 
 @mixin xl {
-  @media only screen and (min-width: 1280px) {
+  @media (max-width: 1500px) {
     @content;
   }
 }
 
 @mixin xxl {
-  @media only screen and (min-width: 1536px) {
+  @media (max-width: 1800px) {
     @content;
   }
 }
 
-@mixin ellipsis($line: 2) {
-  display: -webkit-box;
-  -webkit-line-clamp: $line;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// @mixin ellipsis($line: 2) {
+//   display: -webkit-box;
+//   -webkit-line-clamp: $line;
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
